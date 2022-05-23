@@ -1,0 +1,45 @@
+.not-card.not-card1
+  .clearfix 
+    h1.float-left Users
+  .clearfix
+    .float-left.form-outline 
+      =form_tag search_users_path, method: :get
+        = text_field_tag :search_keyword,{}, class: "form-control w-auto mv-r-20 float-left", value: last_search_keyword, placeholder: "Name or Email"
+        =submit_tag "Search", class: "btn button1 button2 mv-r-20"
+        ==link_to 'Clear', users_path, class:"btn btn-secondary mv-20"
+
+  table#table_id.table
+      thead
+          tr
+              th Id
+              th Name
+              th Email
+              th Created User
+              th Type
+              th Phone
+              th DOB
+              th Address
+              - if admin?
+              th Operations
+      tbody
+          - model.each do |user|
+            tr
+                td 
+                    ==user.id
+                td 
+                    ==link_to user.name, user_path(user)
+                td 
+                    ==user.email
+                td 
+                    ==user.created_user.name
+                td 
+                    ==user.role == "0" ? 'Admin' : 'User'
+                td 
+                    ==user.phone
+                td 
+                    ==user.dob
+                td 
+                    ==user.address    
+                - if admin?
+                td              
+                    ==link_to 'Delete', user_path(user), method: :delete, data: { confirm: "Are you sure?" }, class: "btn button1 button2"

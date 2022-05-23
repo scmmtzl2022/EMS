@@ -1,0 +1,19 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-primary.text-light
+  = link_to "Home", root_path , class:"navbar-brand text-light"
+  .collapse.navbar-collapse id="navbarSupportedContent"
+    -if logged_in?
+      ul.navbar-nav.mr-auto
+        
+      ul.navbar-nav.my-sm-0
+        -if admin?
+          li.nav-item
+            = link_to "Create New Employee", new_user_path , class:"nav-link text-light"
+        li.nav-item 
+          .dropdown.show
+            a.nav-link.dropdown-toggle.text-light role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+              = current_user.name
+            .dropdown-menu aria-labelledby="dropdownMenuLink" style="left:-75px;"
+              = link_to "Profile", user_path(current_user) , class:"dropdown-item"
+              = link_to "Log Out", logout_path , class:"dropdown-item"
+          
+          
