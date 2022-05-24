@@ -7,9 +7,14 @@ body{
   width: 90%;
   margin: 0 auto;
 }
+.table-wrapper{   
+  width: 500px;
+  overflow-x: scroll;
+}
+
 
 .form-wrapper{
-  width: 30%;
+  width: 40%;
   margin: 0 auto;
 }
 .navbar-default {
@@ -106,6 +111,14 @@ table{
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+.card_table{
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  margin: 70px auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
 
 .not-card{  
   width:100%;
@@ -129,7 +142,12 @@ table{
 .mb-300{
   margin: 30px auto 300px;
 }
-
+.header{
+  width: 100%;
+  top: 0;
+  opacity: 1;
+  position: fixed;
+}
 footer{
   width: 100%;
   bottom: 0;

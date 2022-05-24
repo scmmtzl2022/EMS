@@ -11,7 +11,10 @@ module User::Operation
 
     def assign_current_user!(options, params:, **)
       options['model'][:dob] = params[:user][:dob]
+      options['model'][:join_date] = params[:user][:join_date]
+      options['model'][:SSB_card_issue_date] = params[:user][:SSB_card_issue_date]
       options[:params][:user][:updated_user_id] = options['current_user'][:id]
+      
     end
   end
 end

@@ -17,7 +17,8 @@ html
 
     / / Datatable
     = stylesheet_link_tag  'https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css'
-    script src= "https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"
+    = stylesheet_link_tag  'https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js'
+    script src= "https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js" 
 
     / / Custom JS and CSS
     
@@ -32,3 +33,10 @@ html
       = yield 
     -if logged_in? 
       = render 'layouts/footer'
+javascript:
+  $(document).ready( function () {
+    $('#table_id').DataTable();
+ });    
+  
+    
+

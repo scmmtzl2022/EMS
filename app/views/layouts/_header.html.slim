@@ -1,5 +1,6 @@
 nav.navbar.navbar-expand-lg.navbar-light.bg-primary.text-light
   = link_to "Home", root_path , class:"navbar-brand text-light"
+  h5.text-center Employee Management System
   .collapse.navbar-collapse id="navbarSupportedContent"
     -if logged_in?
       ul.navbar-nav.mr-auto
@@ -14,6 +15,8 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-primary.text-light
               = current_user.name
             .dropdown-menu aria-labelledby="dropdownMenuLink" style="left:-75px;"
               = link_to "Profile", user_path(current_user) , class:"dropdown-item"
+              = link_to "Edit", edit_user_path(current_user), class: 'dropdown-item'
+              = link_to "Change Password", edit_password_path(current_user), class: 'dropdown-item'
               = link_to "Log Out", logout_path , class:"dropdown-item"
           
           

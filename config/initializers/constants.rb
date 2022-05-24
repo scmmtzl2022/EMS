@@ -10,3 +10,16 @@ module Constants
   POST_CSV_FORMAT_HEADER = %w[title description status]
   VALID_DATE_FORMAT = /\d{4}-\d{2}-\d{2}/
 end
+module Constants
+  EMPLOYMENTTYPES = {
+    'Full Time' => 'Full Time',
+    'Part Time' => 'Part Time'
+  }.freeze
+end
+module Constants
+  DEPARTMENTS = {
+    'IT' => 'IT',
+    'Office Operation' => 'Office Operation',
+    'Network' => 'Network'
+  }.freeze
+end

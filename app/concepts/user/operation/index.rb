@@ -5,9 +5,7 @@ module User::Operation
     step :get_users
 
     def get_users(options, **)
-      options['users'] = if options[:is_admin]
-                           User.all
-                         end
+      options['users'] = User.all                   
     end
   end
 end

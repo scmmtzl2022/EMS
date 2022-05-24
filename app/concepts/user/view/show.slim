@@ -1,14 +1,11 @@
 .wrapper.not-card.not-card1
-  h1.mv-20 User Detail
+  h1.mv-20 Employee Information Detail
   .row
-    .col-4
+    .col-4.card_table
       .form-group
         .img.text-center.mv-20.profile
            ==image
-        .mv-20.text-center
-          p = link_to "Edit", edit_user_path, class: 'btn button1 btn-wid'
-          p = link_to "Change Password", edit_password_path, class: 'btn button1 button2 btn-wid'
-    .col-8
+    .col-8.card_table
       .form-group.row
         label.col-sm-4.col-form-label
           strong Name:
@@ -16,46 +13,43 @@
           ==model.name
       .form-group.row
         label.col-sm-4.col-form-label
-          strong Type:
+          strong Employee ID:
         .col-sm-8
-          ==model.role == "0" ? 'Admin' : 'User'
+          ==model.id
       .form-group.row
         label.col-sm-4.col-form-label
-          strong Email:
+          strong Join Date:
         .col-sm-8
-          ==model.email
+          ==model.join_date
       .form-group.row
         label.col-sm-4.col-form-label
-          strong Phone:
+          strong Position:
         .col-sm-8
-          ==model.phone
+          ==model.position
       .form-group.row
         label.col-sm-4.col-form-label
-          strong Date of Birth:
+          strong Department:
         .col-sm-8
-          ==model.dob
+          ==model.department
       .form-group.row
         label.col-sm-4.col-form-label
-          strong Address:
+          strong Gender:
         .col-sm-8
-          ==model.address
+          ==model.gender
       .form-group.row
         label.col-sm-4.col-form-label
-          strong Created Date:
+          strong Language:
         .col-sm-8
-          ==model.created_at.strftime('%Y/%m/%d')
+          ==model.language
       .form-group.row
         label.col-sm-4.col-form-label
-          strong Created User:
+          strong Graduated University:
         .col-sm-8
-          ==model.created_user.name
+          ==model.university
       .form-group.row
         label.col-sm-4.col-form-label
-          strong Updated Date:
+          strong Graduated Degree:
         .col-sm-8
-          ==model.updated_at.strftime('%Y/%m/%d')
-      .form-group.row
-        label.col-sm-4.col-form-label
-          strong Updated User:
-        .col-sm-8
-          ==model.updated_user.name
+          ==model.degree
+      ==link_to 'Back', root_path(model), class:"btn button1 button2 mv-20"    
+      

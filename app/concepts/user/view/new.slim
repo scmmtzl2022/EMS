@@ -132,10 +132,10 @@
           .error-msg Join Date  #{ model.errors[:join_date][0] }
     div
         =f.label :employment_type, "Employment Type", class:" col-form-label"
-        = f.select(:employment_type, options_for_select(Constants::TYPES),{}, {:class => "form-control"})
+        = f.select(:employment_type, options_for_select(Constants::EMPLOYMENTTYPES),{}, {:class => "form-control"})
     div
         =f.label :department, "Department", class:" col-form-label"
-        = f.select(:department, options_for_select(Constants::TYPES),{}, {:class => "form-control"})
+        = f.select(:department, options_for_select(Constants::DEPARTMENTS),{}, {:class => "form-control"})
     div
       =f.label :university, class:" col-form-label"
       =f.text_area :university, class:"form-control"

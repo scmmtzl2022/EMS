@@ -1,10 +1,8 @@
 -if logged_in?
-  .not-card
-    -if admin?
-        = link_to "Employee Information", users_path , class:"user-list"
-        = link_to "Attendance Report", users_path , class:"attendence"
-    -else
-      h5.text-info User
+  .not-card    
+    = link_to "Employee Information", users_path , class:"user-list"
+    = link_to "Attendance Report", users_path , class:"attendence"
+    
 -else
   .card 
     h4  Employee Management System

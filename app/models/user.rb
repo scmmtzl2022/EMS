@@ -15,6 +15,9 @@ class User < ApplicationRecord
   has_one_attached :profile
 
   # to check old password with new password
-  #attr_accessor :old_password
+  attr_accessor :old_password
   attr_accessor :remember_me
+  
+  # set per_page globally
+  WillPaginate.per_page = 10
 end

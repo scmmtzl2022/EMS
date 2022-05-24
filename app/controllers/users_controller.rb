@@ -7,8 +7,8 @@ class UsersController < ApplicationController
   # show user list
   # params: admin?
   def index
-    run User::Operation::Index, is_admin: admin? do |result|
-      render cell(User::Cell::Index, result[:users], is_admin: admin?)
+    run User::Operation::Index do |result|
+      render cell(User::Cell::Index, result[:users])
     end
   end
 

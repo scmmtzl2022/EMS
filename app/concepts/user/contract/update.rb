@@ -9,7 +9,30 @@ module User::Contract
     property :dob, as: :date
     property :address
     property :profile
-    property :create_user_id
+    property :position
+    property :join_date, as: :date
+    property :employment_type
+    property :department
+    property :university
+    property :degree
+    property :skill
+    property :language
+    property :iq
+    property :gender
+    property :nrc_no
+    property :marital_status
+    property :card_id
+    property :pc_number
+    property :bank_account
+    property :religion
+    property :SSB_number
+    property :SSB_card_issue_date, as: :date
+    property :mac_address
+    property :pc_password
+    property :contact_name
+    property :contact_phone
+    property :relation
+    property :created_user_id
     property :updated_user_id
 
     validates :name, presence: true, length: { maximum: 100 }
