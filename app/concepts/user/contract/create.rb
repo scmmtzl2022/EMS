@@ -12,7 +12,7 @@ module User::Contract
     property :address
     property :profile
     property :position
-    property :join_date
+    property :join_date, as: :date
     property :employment_type
     property :department
     property :university
@@ -28,7 +28,7 @@ module User::Contract
     property :bank_account
     property :religion
     property :SSB_number
-    property :SSB_card_issue_date
+    property :SSB_card_issue_date, as: :date
     property :mac_address
     property :pc_password
     property :contact_name
